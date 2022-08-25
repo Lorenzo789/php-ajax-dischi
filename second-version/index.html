@@ -31,12 +31,14 @@
             <div class="genre-container">
                 <label for="genre">Select a genre</label>
                 <select name="genre" id="genre" v-model="selected" @change="filterCard(selected)">
+
                     <option selected value="all">All</option>
                     <option value="jazz">Jazz</option>
-                    <option value="pop">Hip Hop</option>
+                    <option value="hip hop">Hip Hop</option>
                     <option value="metal">Metal</option>
                     <option value="rock">Rock</option>
                     <option value="rap">Rap</option>
+                    
                 </select>
             </div>
 

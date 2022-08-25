@@ -14,6 +14,7 @@ const root = new Vue(
                     .then( (response) => {
 
                         this.listDisc = response.data;
+                        this.filteredCardGenre = this.listDisc;
 
                         console.log(this.listDisc);
 
@@ -21,9 +22,15 @@ const root = new Vue(
             },
             filterCard(selected){
                 this.filteredCardGenre = [...this.listDisc].filter( (disc) => disc.genre.toLowerCase().includes(selected));
+
                 console.log(this.filteredCardGenre);
+
+                console.log(this.listDisc);
+
+                this.listDisc = this.filteredCardGenre;
                 
                 if (selected == 'all') {
+                    
                     this.filteredCardGenre = this.listDisc;
                 }
             },
