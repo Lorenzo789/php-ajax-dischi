@@ -27,18 +27,31 @@
         </header>
 
         <main>
+
+            <div class="genre-container">
+                <label for="genre">Select a genre</label>
+                <select name="genre" id="genre" v-model="selected" @change="filterCard(selected)">
+                    <option selected value="all">All</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="pop">Hip Hop</option>
+                    <option value="metal">Metal</option>
+                    <option value="rock">Rock</option>
+                    <option value="rap">Rap</option>
+                </select>
+            </div>
+
             <div class="container">
 
-                <div class="card" v-for="element in this.listDisc">
+                <div class="card" v-for="disc in listDisc">
     
                     <div class="image-container">
-                        <img :src="element.poster" alt="">
+                        <img :src="disc.poster" alt="">
                     </div>
     
-                    <h3>{{ element.title }}</h3>
-                    <p>{{ element.author }}</p>
-                    <p>{{ element.genre }}</p>
-                    <p>{{ element.year }}</p>
+                    <h3>{{ disc.title }}</h3>
+                    <p>{{ disc.author }}</p>
+                    <p>{{ disc.genre }}</p>
+                    <p>{{ disc.year }}</p>
     
                 </div>
 

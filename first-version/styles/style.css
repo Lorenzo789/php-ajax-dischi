@@ -24,6 +24,33 @@ main{
     height: calc(100vh - 70px);
 }
 
+.genre-container{
+    align-self: baseline;
+    position: relative;
+    top: 10px;
+    left: 610px;
+}
+
+.genre-container label{
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    padding-right: 10px
+}
+
+select{
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+select option{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
 main .container{
     display: flex;
     justify-content: center;
